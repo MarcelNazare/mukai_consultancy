@@ -3,5 +3,6 @@ runserver:
 	@pnpm run dev
 	
 killport :
-	@mykillport.sh 4421
+	@fuser -k 4421/tcp
+
 
