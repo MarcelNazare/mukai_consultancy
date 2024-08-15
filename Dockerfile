@@ -1,6 +1,4 @@
-FROM --platform=linux/arm64 debian:11-slim AS deps
-
-RUN ls /
+FROM caddy:alpine
 
 # Install Node.js and npm
 RUN apk update && apk add --no-cache nodejs pnpm
