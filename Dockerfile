@@ -1,7 +1,7 @@
 FROM caddy:alpine
 
 # Install Node.js and npm
-RUN apk update && apk add --no-cache nodejs npm
+RUN apk update && apk add --no-cache nodejs pnpm
 
 # Set the working directory
 WORKDIR /app
