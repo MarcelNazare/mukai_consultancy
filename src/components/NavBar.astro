@@ -2,20 +2,22 @@
 
 // import the Image component and the image
 import { Image } from 'astro:assets';
-import navbarLogo from '../images/logos/DarkTeel.svg'; // Image is 1600x900
+import navbarLogo from '../images/logos/White.svg'; // Image is 1600x900
 ---
 
 <!-- ============================================ -->
 <!--                 Navigation                   -->
 <!-- ============================================ -->
 
-
 <header id="cs-navigation">
-        <div class="cs-container">
+
+  <!-- Flex box has been giving me issues and if I apply it to the div below content dissapears (Brand logo) -->
+        <div class="cs-container flex flex-basis">
             <!--Nav Logo-->
             <!--Logo is turned white in the css with a filter on dark mode-->
             <a href="/" class="cs-logo" aria-label="back to home">
-                <Image src={navbarLogo} alt="Mukai Logo for the Navigation Bar" width="210" height="29" aria-hidden="true" decoding="async">
+              
+                <Image src={navbarLogo} alt="Mukai Logo for the Navigation Bar" width="210" height="29" >
             </a>
             <!--Navigation List-->
             <nav class="cs-nav" role="navigation">
@@ -96,7 +98,7 @@ import navbarLogo from '../images/logos/DarkTeel.svg'; // Image is 1600x900
                 <img class="cs-sun" aria-hidden="true" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fsun.svg" decoding="async" alt="moon" width="15" height="15">
             </button> -->
         </div>
-    </header>
+</header>
 
 
                                 
@@ -167,13 +169,14 @@ import navbarLogo from '../images/logos/DarkTeel.svg'; // Image is 1600x900
     opacity: 1;
     transform: translateY(0);
   }
+/*
   #cs-navigation .cs-container {
     width: 100%;
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-row;
     align-items: center;
     gap: 1.5rem;
-  }
+  }*/
   #cs-navigation .cs-logo {
     width: auto;
     max-width: 12.5rem;
@@ -185,13 +188,19 @@ import navbarLogo from '../images/logos/DarkTeel.svg'; // Image is 1600x900
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    z-index: 10;
+    z-index: 100;
+    background-color:black
+    
+
   }
   #cs-navigation .cs-logo img {
     width: 100%;
     height: 100%;
     /* ensures the image never overflows the container. It stays contained within it's width and height and expands to fill it then stops once it reaches an edge */
     object-fit: contain;
+    color:black;
+    background-color:black;
+    z-index:10;
   }
   #cs-navigation .cs-toggle {
     width: 3.5rem;
@@ -424,6 +433,7 @@ import navbarLogo from '../images/logos/DarkTeel.svg'; // Image is 1600x900
     top: 50%;
     right: -1.25rem;
     transform: translateY(-50%);
+  
   }
   #cs-navigation .cs-drop-ul {
     width: 100%;
@@ -608,7 +618,7 @@ import navbarLogo from '../images/logos/DarkTeel.svg'; // Image is 1600x900
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    z-index: 100;
+    z-index: 900;
   }
   #cs-navigation .cs-logo img {
     width: auto;
