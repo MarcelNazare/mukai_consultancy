@@ -6,3 +6,6 @@ killport :
 	@fuser -k 4421/tcp
 
 
+install:
+	@echo "[+] Install dependencies"
+	@pnpm install
