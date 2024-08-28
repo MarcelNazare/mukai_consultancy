@@ -2,6 +2,8 @@
 
 // import the Image component and the image
 import { Image } from 'astro:assets';
+import Logo from "../images/logos/DarkTeel.svg";
+import LogoWhite from "../images/logos/White.svg";
 ---
 
 <!-- ============================================ -->
@@ -17,7 +19,10 @@ import { Image } from 'astro:assets';
             <!--Logo is turned white in the css with a filter on dark mode-->
             <a href="/" class="cs-logo" aria-label="back to home">
               <!-- Fix the omport problem I am having with images and refer to the Astro Documentation -->
-                <img src="/images/logos/White.svg" alt="Mukai Logo for the Navigation Bar" width="210" height="29" class="flex-1" >
+              <Image src={Logo}  alt="Mukai Logo for the Navigation Bar" width="210" height="29" />
+              <!--
+                <img src="/images/logos/DarkTeel.svg" alt="Mukai Logo for the Navigation Bar" width="210" height="29" class="flex-1" >
+                 -->
             </a>
             <!--Navigation List-->
             <nav class="cs-nav" role="navigation">

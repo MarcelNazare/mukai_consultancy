@@ -1,5 +1,6 @@
 ---
-
+import { Image } from 'astro:assets';
+import HeroImage from "../images/Mukai-Hero ImageAsset 2@3x.webp";
 ---
 
 <!-- ============================================ -->
@@ -20,9 +21,7 @@
                 </div>
             </div>
             <picture class="cs-picture">
-                <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Landscapes/construction-site.png">
-                <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Landscapes/construction-site.png">
-                <img decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Landscapes/construction-site.png" alt="construction site" width="1280" height="510">
+                <Image decoding="async" src={HeroImage} alt="construction site" width="1280" height="510">
             </picture>
             <ul class="cs-card-group">
                 <li class="cs-item">
@@ -31,8 +30,11 @@
                     </picture>
                     <!-- Text Grouped For Flexbox-->
                     <div class="cs-text-group">
-                        <h3 class="cs-h3">Construction</h3>
-                        <p class="cs-item-text">Designing and Building The Most Beautiful Custom Homes.</p>
+                        <h3 class="cs-h3">Innovative Solutions</h3>
+                        <p class="cs-item-text"> Our experts translate disruptive 
+                          thinking into actionable solutions. 
+                          Unleash your unstoppable 
+                          advantage.</p>
                     </div>
                 </li>
                 <li class="cs-item">
@@ -41,8 +43,11 @@
                     </picture>
                     <!-- Text Grouped For Flexbox-->
                     <div class="cs-text-group">
-                        <h3 class="cs-h3">Project Development</h3>
-                        <p class="cs-item-text">Designing and Building The Most Beautiful Custom Homes.</p>
+                        <h3 class="cs-h3">Professional Teamt</h3>
+                        <p class="cs-item-text"> Our handpicked team challenges the 
+                          status quo and crafts 
+                          digital-powered strategies that 
+                          deliver.</p>
                     </div>
                 </li>
                 <li class="cs-item">
@@ -51,8 +56,11 @@
                     </picture>
                     <!-- Text Grouped For Flexbox-->
                     <div class="cs-text-group">
-                        <h3 class="cs-h3">Interior Design</h3>
-                        <p class="cs-item-text">Designing and Building The Most Beautiful Custom Homes.</p>
+                        <h3 class="cs-h3">24/7 Support</h3>
+                        <p class="cs-item-text">Don't let time zones or deadlines 
+                          slow you down. Our global network 
+                          of 24/7 experts ensures your project 
+                          never sleeps.</p>
                     </div>
                 </li>
                 <li class="cs-item">
@@ -61,8 +69,8 @@
                     </picture>
                     <!-- Text Grouped For Flexbox-->
                     <div class="cs-text-group">
-                        <h3 class="cs-h3">Architecture</h3>
-                        <p class="cs-item-text">Designing and Building The Most Beautiful Custom Homes.</p>
+                        <h3 class="cs-h3">Dedicated Project Managers</h3>
+                        <p class="cs-item-text">Ensure seamless communication and project oversight, keeping you informed every step of the way.</p>
                     </div>
                 </li>
             </ul>
